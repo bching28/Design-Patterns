@@ -2,16 +2,21 @@
 #define REVERSESTATE_H
 
 #include "CarState.h"
+#include "Car.h"
 
 class ReverseState : public CarState {
 
 public:
+    ReverseState(Car newCar);
+    ~ReverseState();
+
     void shutoffEngine();
     void reverseCar();
     void pushCar();
     void accelerateCar();
     void applyBrakes();
 
+    Car car;
 };
 
 #endif /* REVERSESTATE_H */
