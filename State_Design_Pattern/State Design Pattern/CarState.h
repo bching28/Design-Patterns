@@ -1,6 +1,8 @@
 #ifndef CARSTATE_H
 #define CARSTATE_H
 
+#include <iostream>
+
 class CarState {
 
 public:

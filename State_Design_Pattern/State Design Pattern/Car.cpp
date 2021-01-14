@@ -1,17 +1,21 @@
 #include "Car.h"
 
 Car::Car() {
-    parkState = new ParkState();
-    reverseState = new ReverseState();
-    neutralState = new NeutralState();
-    driveState = new DriveState();
+    //parkState = new ParkState(this);
+    //reverseState = new ReverseState();
+    //neutralState = new NeutralState();
+    //driveState = new DriveState();
 
-    carState = parkState;
+    carState = NULL;
 
     handbrakeEngaged = true;
 }
 
 void Car::setCarState(CarState* newCarState) {
+    if (carState != NULL) {
+        delete carState;
+    }
+
     carState = newCarState;
 }
 
@@ -35,7 +39,7 @@ void Car::applyBrakes() {
     carState->applyBrakes();
 }
 
-CarState* Car::getParkCarState() {
+/*CarState* Car::getParkCarState() {
     return parkState;
 }
 
@@ -49,4 +53,4 @@ CarState* Car::getNeutralCarState() {
 
 CarState* Car::getDriveCarState() {
     return driveState;
-}
+}*/
