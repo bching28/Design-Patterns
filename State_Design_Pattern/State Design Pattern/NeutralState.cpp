@@ -5,7 +5,23 @@ NeutralState::NeutralState(Car newCar) {
     car = newCar;
 }
 
-void NeutralState::shutoffEngine() {
+void NeutralState::shiftPark() {
+
+}
+
+void NeutralState::shiftReverse() {
+
+}
+
+void NeutralState::shiftNeutral() {
+
+}
+
+void NeutralState::shiftDrive() {
+
+}
+
+/*void NeutralState::shutoffEngine() {
     std::cout << "You don't want to shut off the engine when in Park" << std::endl;
 }
 
@@ -31,4 +47,4 @@ void NeutralState::accelerateCar(int newSpeed) {
 void NeutralState::applyBrakes() {
     car.speed = 0;
     std::cout << "Car has stopped" << std::endl;
-}
+}*/

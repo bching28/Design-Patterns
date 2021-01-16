@@ -6,7 +6,23 @@ ReverseState::ReverseState(Car newCar) {
     car = newCar;
 }
 
-void ReverseState::shutoffEngine() {
+void ReverseState::shiftPark() {
+
+}
+
+void ReverseState::shiftReverse() {
+
+}
+
+void ReverseState::shiftNeutral() {
+
+}
+
+void ReverseState::shiftDrive() {
+
+}
+
+/*void ReverseState::shutoffEngine() {
     if (car.speed != 0) {
         std::cout << "You don't wanna do that...car is in motion" << std::endl;
     }
@@ -44,4 +60,4 @@ void ReverseState::accelerateCar(int newSpeed) {
 void ReverseState::applyBrakes() {
     car.speed = 0;
     std::cout << "Car has stopped" << std::endl;
-}
+}*/

@@ -7,7 +7,23 @@ DriveState::DriveState(Car newCar) {
     car = newCar;
 }
 
-void DriveState::shutoffEngine() {
+void DriveState::shiftPark() {
+
+}
+
+void DriveState::shiftReverse() {
+
+}
+
+void DriveState::shiftNeutral() {
+
+}
+
+void DriveState::shiftDrive() {
+
+}
+
+/*void DriveState::shutoffEngine() {
     if (car.speed != 0) {
         std::cout << "Car in motion...cannot shut off engine" << std::endl;
     }
@@ -42,4 +58,4 @@ void DriveState::accelerateCar(int newSpeed) {
 void DriveState::applyBrakes() {
     car.speed = 0;
     std::cout << "Car has stopped" << std::endl;
-}
+}*/

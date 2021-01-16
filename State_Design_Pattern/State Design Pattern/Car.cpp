@@ -9,6 +9,13 @@ Car::Car() {
     carState = NULL;
 
     handbrakeEngaged = true;
+    engineOn = false;
+    speed = 0;
+    distance = 0;
+}
+
+Car::~Car() {
+    //delete carState;
 }
 
 void Car::setCarState(CarState* newCarState) {
@@ -19,24 +26,52 @@ void Car::setCarState(CarState* newCarState) {
     carState = newCarState;
 }
 
-void Car::shutoffEngine() {
-    carState->shutoffEngine();
+void Car::shiftPark() {
+    carState->shiftPark();
 }
 
-void Car::reverseCar() {
-    carState->reverseCar();
+void Car::shiftReverse() {
+    carState->shiftReverse();
 }
 
-void Car::pushCar() {
-    carState->pushCar();
+void Car::shiftNeutral() {
+    carState->shiftNeutral();
+}
+
+void Car::shiftDrive() {
+    carState->shiftDrive();
+}
+
+void Car::turnEngineOn() {
+    engineOn = true;
+}
+
+void Car::turnEngineOff() {
+    engineOn = false;
+}
+
+void Car::reverseCar(int reverseSpeed) {
+    speed = reverseSpeed;
+}
+
+void Car::pushCar(int pushDistance) {
+    distance = pushDistance;
 }
 
 void Car::accelerateCar(int newSpeed) {
-    carState->accelerateCar(newSpeed);
+    speed = newSpeed;
 }
 
 void Car::applyBrakes() {
-    carState->applyBrakes();
+    speed = 0;
+}
+
+void Car::engageHandbrake() {
+    handbrakeEngaged = true;
+}
+
+void Car::disengageHandbrake() {
+    handbrakeEngaged = false;
 }
 
 /*CarState* Car::getParkCarState() {

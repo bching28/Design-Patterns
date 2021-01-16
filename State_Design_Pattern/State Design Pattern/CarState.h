@@ -20,5 +20,23 @@ public:
 
 };
 
+/*
+void ParkState::shiftPark() {
+
+}
+
+void ParkState::shiftReverse() {
+
+}
+
+void ParkState::shiftNeutral() {
+
+}
+
+void ParkState::shiftDrive() {
+
+}
+*/
+
 
 #endif /* CARSTATE_H */
