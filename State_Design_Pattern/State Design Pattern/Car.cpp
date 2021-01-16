@@ -26,6 +26,7 @@ void Car::setCarState(CarState* newCarState) {
     carState = newCarState;
 }
 
+// State methods
 void Car::shiftPark() {
     carState->shiftPark();
 }
@@ -42,12 +43,29 @@ void Car::shiftDrive() {
     carState->shiftDrive();
 }
 
+
+// Helper methods
 void Car::turnEngineOn() {
     engineOn = true;
 }
 
 void Car::turnEngineOff() {
     engineOn = false;
+}
+
+void Car::engageHandbrake() {
+    if (speed == 0) {
+        handbrakeEngaged = true;
+        std::cout << "Handbrake engaged" << std::endl;
+    }
+    else {
+        std::cout << "Car in motion...won't apply handbrake" << std::endl;
+    }
+}
+
+void Car::disengageHandbrake() {
+    handbrakeEngaged = false;
+    std::cout << "Handbrake disengaged" << std::endl;
 }
 
 void Car::reverseCar(int reverseSpeed) {
@@ -64,14 +82,6 @@ void Car::accelerateCar(int newSpeed) {
 
 void Car::applyBrakes() {
     speed = 0;
-}
-
-void Car::engageHandbrake() {
-    handbrakeEngaged = true;
-}
-
-void Car::disengageHandbrake() {
-    handbrakeEngaged = false;
 }
 
 /*CarState* Car::getParkCarState() {

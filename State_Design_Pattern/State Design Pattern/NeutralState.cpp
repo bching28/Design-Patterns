@@ -13,7 +13,7 @@ void NeutralState::shiftPark() {
     }
     else {
         std::cout << "Shifting gear to Park" << std::endl;
-        car.setCarState(new ParkState(car));
+        //car.setCarState(new ParkState(car));
     }
 }
 
@@ -23,7 +23,7 @@ void NeutralState::shiftReverse() {
     }
     else {
         std::cout << "Shifting gear to Park" << std::endl;
-        car.setCarState(new ParkState(car));
+        //car.setCarState(new ParkState(car));
     }
 }
 

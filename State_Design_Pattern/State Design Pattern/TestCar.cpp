@@ -1,3 +1,14 @@
+#include "Car.h"
+#include "ParkState.h"
+
 int main() {
-    return 0;
+    Car* testCar = new Car();
+    testCar->setCarState(new ParkState(testCar));
+
+    testCar->shiftDrive();
+    testCar->turnEngineOn();
+    testCar->shiftDrive();
+
+
+    
 }

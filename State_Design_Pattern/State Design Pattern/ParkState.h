@@ -7,7 +7,7 @@
 class ParkState : public CarState {
     
 public:
-    ParkState(Car newCar);
+    ParkState(Car* newCar);
     ~ParkState();
 
     /*void shutoffEngine();
@@ -21,7 +21,7 @@ public:
     void shiftNeutral();
     void shiftDrive();
 
-    Car car;
+    Car* car;
 };
 
 #endif /* PARKSTATE_H */
