@@ -8,19 +8,32 @@ DriveState::DriveState(Car newCar) {
 }
 
 void DriveState::shiftPark() {
-
+    if (car.speed != 0) {
+        std::cout << "Stop the car" << std::endl;
+    }
+    else {
+        std::cout << "Shifting gear to Park" << std::endl;
+        car.setCarState(new ParkState(car));
+    }
 }
 
 void DriveState::shiftReverse() {
-
+    if (car.speed != 0) {
+        std::cout << "Stop the car" << std::endl;
+    }
+    else {
+        std::cout << "Shifting gear to Reverse" << std::endl;
+        car.setCarState(new ReverseState(car));
+    }
 }
 
 void DriveState::shiftNeutral() {
-
+    std::cout << "Shifting gear to Neutral" << std::endl;
+    car.setCarState(new NeutralState(car));
 }
 
 void DriveState::shiftDrive() {
-
+    std::cout << "Car already in Drive" << std::endl;
 }
 
 /*void DriveState::shutoffEngine() {
