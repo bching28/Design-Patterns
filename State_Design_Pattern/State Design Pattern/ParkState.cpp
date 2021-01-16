@@ -6,12 +6,15 @@
 //------------------------------------------------------------------
 // Assumptions:
 // 1. Can't shift gears unless engine is turned on
-//
 //------------------------------------------------------------------
 
 
 ParkState::ParkState(Car* newCar) {
     car = newCar;
+}
+
+ParkState::~ParkState() {
+    delete car;
 }
 
 void ParkState::shiftPark() {

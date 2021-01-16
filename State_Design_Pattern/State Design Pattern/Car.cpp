@@ -25,7 +25,7 @@ Car::Car() {
 }
 
 Car::~Car() {
-    //delete carState;
+    delete carState;
 }
 
 void Car::setCarState(CarState* newCarState) {

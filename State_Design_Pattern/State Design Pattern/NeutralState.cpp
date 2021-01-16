@@ -7,6 +7,10 @@ NeutralState::NeutralState(Car* newCar) {
     car = newCar;
 }
 
+NeutralState::~NeutralState() {
+    delete car;
+}
+
 void NeutralState::shiftPark() {
     if (car->speed != 0) {
         std::cout << "Stop the car" << std::endl;

@@ -10,12 +10,6 @@ public:
     NeutralState(Car* newCar);
     ~NeutralState();
 
-    /*void shutoffEngine();
-    void reverseCar();
-    void pushCar();
-    void accelerateCar(int newSpeed);
-    void applyBrakes();*/
-
     void shiftPark();
     void shiftReverse();
     void shiftNeutral();

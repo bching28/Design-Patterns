@@ -10,12 +10,6 @@ public:
     ParkState(Car* newCar);
     ~ParkState();
 
-    /*void shutoffEngine();
-    void reverseCar();
-    void pushCar();
-    void accelerateCar(int newSpeed);
-    void applyBrakes();*/
-
     void shiftPark();
     void shiftReverse();
     void shiftNeutral();

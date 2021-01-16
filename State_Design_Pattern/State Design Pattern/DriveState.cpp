@@ -7,6 +7,10 @@ DriveState::DriveState(Car* newCar) {
     car = newCar;
 }
 
+DriveState::~DriveState() {
+    delete car;
+}
+
 void DriveState::shiftPark() {
     if (car->speed != 0) {
         std::cout << "Stop the car" << std::endl;

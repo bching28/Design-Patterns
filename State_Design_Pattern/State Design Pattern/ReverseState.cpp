@@ -7,6 +7,10 @@ ReverseState::ReverseState(Car* newCar) {
     car = newCar;
 }
 
+ReverseState::~ReverseState() {
+    delete car;
+}
+
 void ReverseState::shiftPark() {
     if (car->speed != 0) {
         std::cout << "Stop the car" << std::endl;
