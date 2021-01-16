@@ -14,6 +14,7 @@ public:
     CarState* carState;
 
     bool handbrakeEngaged;
+    int speed;
 
     Car();
     //~Car();
@@ -23,7 +24,7 @@ public:
     void shutoffEngine();
     void reverseCar();
     void pushCar();
-    void accelerateCar();
+    void accelerateCar(int newSpeed);
     void applyBrakes();
 
     /*CarState* getParkCarState();

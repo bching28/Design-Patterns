@@ -7,10 +7,13 @@
 class DriveState : public CarState {
 
 public:
+    DriveState(Car newCar);
+    ~DriveState();
+
     void shutoffEngine() override;
     void reverseCar() override;
     void pushCar() override;
-    void accelerateCar() override;
+    void accelerateCar(int newSpeed) override;
     void applyBrakes() override;
 
     Car car;

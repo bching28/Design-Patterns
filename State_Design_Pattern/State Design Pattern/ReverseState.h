@@ -13,7 +13,7 @@ public:
     void shutoffEngine();
     void reverseCar();
     void pushCar();
-    void accelerateCar();
+    void accelerateCar(int newSpeed);
     void applyBrakes();
 
     Car car;

@@ -7,10 +7,13 @@
 class NeutralState : public CarState {
 
 public:
+    NeutralState(Car newCar);
+    ~NeutralState();
+
     void shutoffEngine();
     void reverseCar();
     void pushCar();
-    void accelerateCar();
+    void accelerateCar(int newSpeed);
     void applyBrakes();
 
     Car car;

@@ -31,8 +31,8 @@ void Car::pushCar() {
     carState->pushCar();
 }
 
-void Car::accelerateCar() {
-    carState->accelerateCar();
+void Car::accelerateCar(int newSpeed) {
+    carState->accelerateCar(newSpeed);
 }
 
 void Car::applyBrakes() {

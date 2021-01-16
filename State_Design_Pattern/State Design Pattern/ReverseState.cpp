@@ -1,25 +1,47 @@
 #include "ReverseState.h"
+#include "ParkState.h"
+#include "NeutralState.h"
 
 ReverseState::ReverseState(Car newCar) {
     car = newCar;
 }
 
 void ReverseState::shutoffEngine() {
-    std::cout << "Put the car in Park and engage the handbrake" << std::endl;
+    if (car.speed != 0) {
+        std::cout << "You don't wanna do that...car is in motion" << std::endl;
+    }
+    else if (car.handbrakeEngaged == true) {
+        std::cout << "Engage the handbrake" << std::endl;
+    }
+    else {
+        std::cout << "Shifting gear to Neutral" << std::endl;
+        car.setCarState(new ParkState(car));
+    }
 }
 
 void ReverseState::reverseCar() {
-    std::cout << "You have already put the car in Reverse" << std::endl;
+    std::cout << "Car already in Reverse" << std::endl;
 }
 
 void ReverseState::pushCar() {
-    std::cout << "Car won't budge...put the car in neutral" << std::endl;
+    if (car.speed != 0) {
+        std::cout << "You don't wanna do that...car is in motion" << std::endl;
+    }
+    else if (car.handbrakeEngaged == true) {
+        std::cout << "Engage the handbrake" << std::endl;
+    }
+    else {
+        std::cout << "Shifting gear to Neutral" << std::endl;
+        car.setCarState(new NeutralState(car));
+    }
 }
 
-void ReverseState::accelerateCar() {
-    std::cout << "Car is reversing" << std::endl;
+void ReverseState::accelerateCar(int newSpeed) {
+    car.speed = newSpeed;
+    std::cout << "Car is reversing at " << car.speed << " mph" << std::endl;
 }
 
 void ReverseState::applyBrakes() {
-    std::cout << "The car is not moving" << std::endl;
+    car.speed = 0;
+    std::cout << "Car has stopped" << std::endl;
 }
