@@ -15,9 +15,6 @@ void ParkState::shiftReverse() {
     if (car.engineOn == false) {
         std::cout << "Turn on engine" << std::endl;
     }
-    else if (car.handbrakeEngaged == true) {
-        std::cout << "Release the handbrake" << std::endl;
-    }
     else {
         std::cout << "Shifting gear to Reverse" << std::endl;
         car.setCarState(new ReverseState(car));
@@ -25,21 +22,13 @@ void ParkState::shiftReverse() {
 }
 
 void ParkState::shiftNeutral() {
-    if (car.handbrakeEngaged == true) {
-        std::cout << "Release the handbrake" << std::endl;
-    }
-    else {
-        std::cout << "Shifting gear to Neutral" << std::endl;
-        car.setCarState(new NeutralState(car));
-    }
+    std::cout << "Shifting gear to Neutral" << std::endl;
+    car.setCarState(new NeutralState(car));
 }
 
 void ParkState::shiftDrive() {
     if (car.engineOn == false) {
         std::cout << "Turn on engine" << std::endl;
-    }
-    else if (car.handbrakeEngaged == true) {
-        std::cout << "Release the handbrake" << std::endl;
     }
     else {
         std::cout << "Shifting gears to Drive" << std::endl;
