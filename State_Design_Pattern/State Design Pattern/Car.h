@@ -6,10 +6,10 @@
 class Car {
 
 public:
-    //CarState* parkState;
-    //CarState* reverseState;
-    //CarState* neutralState;
-    //CarState* driveState;
+    CarState* parkState;
+    CarState* reverseState;
+    CarState* neutralState;
+    CarState* driveState;
 
     CarState* carState;
 
@@ -39,10 +39,10 @@ public:
     void disengageHandbrake();
     void turnEngineOn();
 
-    /*CarState* getParkCarState();
+    CarState* getParkCarState();
     CarState* getReverseCarState();
     CarState* getNeutralCarState();
-    CarState* getDriveCarState();*/
+    CarState* getDriveCarState();
 
 };
 
