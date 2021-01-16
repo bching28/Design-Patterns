@@ -1,0 +1,9 @@
+## Files to ignore
+
+.vs/
+Debug/
+Release/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
