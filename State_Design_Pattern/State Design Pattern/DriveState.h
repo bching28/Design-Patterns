@@ -7,7 +7,7 @@
 class DriveState : public CarState {
 
 public:
-    DriveState(Car newCar);
+    DriveState(Car* newCar);
     ~DriveState();
 
     /*void shutoffEngine() override;
@@ -21,7 +21,7 @@ public:
     void shiftNeutral();
     void shiftDrive();
 
-    Car car;
+    Car* car;
 };
 
 #endif /* DRIVESTATE_H */

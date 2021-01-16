@@ -10,7 +10,7 @@ Car::Car() {
     neutralState = new NeutralState(this);
     driveState = new DriveState(this);
 
-    carState = NULL;
+    carState = parkState;
 
     handbrakeEngaged = true;
     engineOn = false;
@@ -34,15 +34,15 @@ CarState* Car::getParkCarState() {
     return parkState;
 }
 
-CarState* getReverseCarState() {
+CarState* Car::getReverseCarState() {
     return reverseState;
 }
 
-CarState* getNeutralCarState() {
+CarState* Car::getNeutralCarState() {
     return neutralState;
 }
 
-CarState* getDriveCarState() {
+CarState* Car::getDriveCarState() {
     return driveState;
 }
 
@@ -67,6 +67,7 @@ void Car::shiftDrive() {
 // Helper methods
 void Car::turnEngineOn() {
     engineOn = true;
+    std::cout << "Turning on engine" << std::endl;
 }
 
 void Car::turnEngineOff() {
@@ -97,8 +98,13 @@ void Car::disengageHandbrake() {
 }
 
 void Car::reverseCar(int reverseSpeed) {
-    speed = reverseSpeed;
-    std::cout << "Reversing at " << speed << " mph" << std::endl;
+    if (carState == getReverseCarState()) {
+        speed = reverseSpeed;
+        std::cout << "Reversing at " << speed << " mph" << std::endl;
+    }
+    else {
+        std::cout << "Shift the car to Reverse" << std::endl;
+    }
 }
 
 void Car::pushCar(int pushDistance) {

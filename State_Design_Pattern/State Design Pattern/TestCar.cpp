@@ -10,7 +10,7 @@ int main() {
     testCar->shiftDrive();
     testCar->accelerateCar(30);
     testCar->applyBrakes();
-    testCar->shiftReverse();
+    //testCar->shiftReverse();
     testCar->reverseCar(3);
     
 }

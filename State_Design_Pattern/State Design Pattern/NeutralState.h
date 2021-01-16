@@ -7,7 +7,7 @@
 class NeutralState : public CarState {
 
 public:
-    NeutralState(Car newCar);
+    NeutralState(Car* newCar);
     ~NeutralState();
 
     /*void shutoffEngine();
@@ -21,7 +21,7 @@ public:
     void shiftNeutral();
     void shiftDrive();
 
-    Car car;
+    Car* car;
 };
 
 #endif /* NEUTRALSTATE_H */

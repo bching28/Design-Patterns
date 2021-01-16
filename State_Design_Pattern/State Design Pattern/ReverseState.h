@@ -7,7 +7,7 @@
 class ReverseState : public CarState {
 
 public:
-    ReverseState(Car newCar);
+    ReverseState(Car* newCar);
     ~ReverseState();
 
     /*void shutoffEngine();
@@ -21,7 +21,7 @@ public:
     void shiftNeutral();
     void shiftDrive();
 
-    Car car;
+    Car* car;
 };
 
 #endif /* REVERSESTATE_H */
