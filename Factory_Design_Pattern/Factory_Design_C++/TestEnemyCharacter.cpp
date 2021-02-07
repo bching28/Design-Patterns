@@ -1,11 +1,5 @@
 #include <iostream>
-#include <ios>
-//#include "EnemyCharacter.h"
 #include "EnemyCharacterFactory.h"
-//#include "SwordEnemyCharacter.h"
-//#include "ShieldEnemyCharacter.h"
-//#include "SpearEnemyCharacter.h"
-//#include "BowEnemyCharacter.h"
 
 void executeEnemyPhase(EnemyCharacter* enemyCharacter);
 
