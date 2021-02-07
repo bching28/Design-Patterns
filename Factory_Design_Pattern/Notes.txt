@@ -1,0 +1,7 @@
+When to use the Factory Design Pattern
+- When you don't know ahead of time what class object you might need
+	- All of these potential classes need to be part of the same subclass hierarchy
+		- same superclass
+- To centralize class selection code logic
+- When you don't want the user to know about every subclass
+- To encapsulate object creation
